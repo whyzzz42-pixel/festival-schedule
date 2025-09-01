@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공근소 맥축제 행사일정표</title>
+    <title>공근소 맥축제 - 일정표 & 안내도</title>
     <style>
         * {
             margin: 0;
@@ -14,23 +14,36 @@
         body {
             font-family: 'Malgun Gothic', sans-serif;
             background: #f5f5f5;
-            min-height: 100vh;
             padding: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
         
         .container {
             max-width: 900px;
-            width: 100%;
+            margin: 0 auto;
             background: white;
             border-radius: 10px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
         
-        .schedule-image {
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .section-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .image {
             width: 100%;
             height: auto;
             display: block;
@@ -41,11 +54,16 @@
                 padding: 10px;
             }
             
-            .schedule-image {
+            .section-title {
+                font-size: 16px;
+                padding: 12px;
+            }
+            
+            .image {
                 cursor: pointer;
             }
             
-            .schedule-image:active {
+            .image:active {
                 transform: scale(1.02);
                 transition: transform 0.1s ease;
             }
@@ -59,12 +77,25 @@
             .container {
                 border-radius: 5px;
             }
+            
+            .section-title {
+                font-size: 14px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="schedule.png" alt="공근소 맥축제 행사일정표" class="schedule-image">
+        <div class="section">
+            <div class="section-title">📅 행사일정표</div>
+            <img src="schedule.png" alt="공근소 맥축제 행사일정표" class="image">
+        </div>
+        
+        <div class="section">
+            <div class="section-title">🗺️ 축제장 안내도</div>
+            <img src="map.png" alt="공근소 맥축제 축제장 안내도" class="image">
+        </div>
     </div>
 </body>
 </html>
